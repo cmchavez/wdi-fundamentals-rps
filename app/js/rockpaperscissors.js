@@ -36,33 +36,37 @@ function getComputerMove(move) {
 }
 
 function getWinner(playerMove,computerMove) {
-    var winner;
+    var winner = "";
 
     if (playerMove === computerMove) {
         winner === "tie";
+        console.log("It's a Tie");
     }
-        else if (playerMove === "rock" && computerMove === "scissors") {
+        else if (playerMove === "rock") 
+            if (computerMove === "scissors") {
         winner === "player";
         console.log("You Won!");
-            else {
+        } else {
                 winner === "computer"; 
                 console.log("Computer Won")
             }
         }
-        else if (playerMove === "paper" && computerMove === "rock") {
+        else if (playerMove === "paper") 
+            if (computerMove === "rock") {
         winner === "player"; 
         console.log("You Won!");
-            else {
+        } else {
                 winner === "computer";
                 console.log("Computer Won");
             }
     }   
-        else if (playerMove === "scissors" && computerMove === "paper"){
-        winner === "player";
-        console.log("You Won!");
-        else {
-            winner === "computer";
-            console.log("Computer Won")
+        else if (playerMove === "scissors") 
+            if (computerMove === "rock") {
+        winner === "computer";
+        console.log("Computer Won");
+        } else {
+            winner === "player";
+            console.log("You Won!")
         }
    }
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
